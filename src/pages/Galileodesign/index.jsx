@@ -17,10 +17,10 @@ export default function GalileodesignPage() {
             <header className="flex flex-row justify-center items-center w-full pt-3 pb-[11px] px-3 border-gray-200 border-b border-solid">
               <div className="flex flex-row justify-center w-[10%] ml-[27px]">
                 <div className="flex flex-row justify-start items-center w-full gap-4">
-                  <Img src="images/img_depth_6_frame_0.svg" alt="image" className="h-4 w-4" />
+                  <Img src="https://img.icons8.com/ios-filled/50/law.png" alt="image" className="h-8 w-8" />
                   <div className="flex flex-row justify-start w-[74%]">
-                    <div className="flex flex-row justify-start w-full pt-0.5">
-                      <Heading size="s" as="h6" className="tracking-[-0.27px]">
+                    <div className="flex flex-row justify-start w-full pt-5.5">
+                      <Heading size="s" as="h6" className="tracking-[-0.27px]" style={{fontSize: '28px'}}>
                         LegalLise
                       </Heading>
                     </div>
@@ -102,7 +102,7 @@ export default function GalileodesignPage() {
                           <div className="flex flex-row justify-center w-full py-0.5">
                             <Link to="/document-form">
                               <Text as="p" className="!text-gray-900 !font-medium">
-                                Accurate data extraction
+                                Streamlined Document Creation
                               </Text>
                             </Link>
                           </div>
@@ -110,7 +110,7 @@ export default function GalileodesignPage() {
                             <Text size="xs" as="p" className="!font-normal"
                               style={{ marginLeft: '25px', paddingTop: '10px' }}
                             >
-                              Our technology ensures accurate data extraction, so you can trust the results.
+                              Effortlessly create legally-binding documents tailored to your needs with our intuitive form.
                             </Text>
                           </div>
                         </div>

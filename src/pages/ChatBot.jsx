@@ -5,6 +5,20 @@ export default function ChatBot() {
   return (
     <div className="flex flex-row justify-center w-full p-5">
         <div className="flex flex-col items-start justify-center w-full pb-60 mx-[140px] max-w-[960px]">
+        <header className="flex flex-row justify-center items-center w-full pt-3 pb-[11px] px-3 border-gray-200 border-b border-solid">
+              <div className="flex flex-row justify-center w-[10%] ml-[27px]">
+                <div className="flex flex-row justify-start items-center w-full gap-4">
+                  <Img src="https://img.icons8.com/ios-filled/50/law.png" alt="image" className="h-8 w-8" />
+                  <div className="flex flex-row justify-start w-[74%]">
+                    <div className="flex flex-row justify-start w-full pt-5.5">
+                      <Heading size="s" as="h6" className="tracking-[-0.27px]" style={{fontSize: '28px'}}>
+                        LegalLise
+                      </Heading>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
         <div className="flex flex-row justify-start p-2.5">
             <Heading size="md" as="h1" className="mt-2.5 ml-[5px] tracking-[-0.80px]">
             Analyzing a legal document

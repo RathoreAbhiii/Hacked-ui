@@ -13,6 +13,11 @@ export default function DocumentForm1() {
         setDueDate(event.target.value);
     };
 
+    const dropDownOptions = [
+        { label: "general", value: "general" },
+        { label: "Limited", value: "Limited" },
+        { label: "Specific", value: "Specific" },
+      ];
   return (
     <div className="flex flex-col items-center justify-start w-full p-5">
         <div className="flex flex-col items-center justify-start w-[42%] py-5">
@@ -35,7 +40,7 @@ export default function DocumentForm1() {
         <div className="flex flex-row justify-center w-full p-3">
             <div className="flex flex-row justify-start w-full mt-3 pt-0.5 mx-1 max-w-[480px]">
             <Heading size="md" as="h1" className="tracking-[-0.80px]">
-           Contracts
+            Power of Attorney
             </Heading>
             </div>
         </div>
@@ -43,76 +48,71 @@ export default function DocumentForm1() {
             <div className="flex flex-row justify-center w-full mx-1 max-w-[480px]">
             </div>
         </div>
-        <div className="flex flex-col items-center justify-start w-full mt-3 max-w-[480px]">
-          <div className="flex flex-row justify-start w-full py-1">
-            <Text as="p" className="mb-1">
-            Subject matter of the contract
+        <div className="flex flex-col items-center justify-start w-full mt-6 max-w-[480px]">
+            <div className="flex flex-row justify-start w-full py-0.5">
+            <Text as="p" className="mb-[7px]">
+            Scope of power granted
             </Text>
-          </div>
-          <Input
-            type="text"
-            name="subject"
-            placeholder="Enter subject"
-            className="w-full"
-          />
+            </div>
+            <SelectBox
+                indicator={<Img src="https://img.icons8.com/ios/50/expand-arrow--v2.png" alt="Vector - 0" className="w-[20px] h-[20px]"/>}
+                name="select"
+                placeholder="Select Power"
+                options={dropDownOptions}
+                className="w-full gap-px border-blue_gray-100 border border-solid"
+            />
         </div>
-        <div className="flex flex-row justify-center w-full mt-3 p-3">
-            <div className="flex flex-row justify-center w-full mx-1 max-w-[480px]">
-            <div className="flex flex-col items-center justify-start w-full">
-                <div className="flex flex-row justify-start w-full py-[3px]">
-                <Text as="p" className="mb-[5px]">
-                Terms and conditions
-                </Text>
+        <div className="flex flex-col items-center justify-start w-full mt-6 max-w-[480px]">
+                <div className="flex flex-row justify-start w-full py-0.5">
+                    <Text as="p" className="mb-[7px]">
+                    Start Date
+                    </Text>
                 </div>
-                <TextArea
-                name="enter_Terms"
-                placeholder="Enter Terms"
-                className="w-full text-blue_gray-500"
-                />
+                <div className="flex items-center w-full">
+                    <Img src="path_to_calendar_icon" alt="Calendar" className="w-6 h-6 mr-2 cursor-pointer" />
+                    <input
+                        type="date"
+                        name="StartDate"
+                        placeholder="Select Start date"
+                        value={dueDate}
+                        onChange={handleDateChange}
+                        className="w-full"
+                    />
+                </div>
             </div>
+         <div className="flex flex-col items-center justify-start w-full mt-6 max-w-[480px]">
+                <div className="flex flex-row justify-start w-full py-0.5">
+                    <Text as="p" className="mb-[7px]">
+                        End Date
+                    </Text>
+                </div>
+                <div className="flex items-center w-full">
+                    <Img src="path_to_calendar_icon" alt="Calendar" className="w-6 h-6 mr-2 cursor-pointer" />
+                    <input
+                        type="date"
+                        name="EndDate"
+                        placeholder="Select end date"
+                        value={dueDate}
+                        onChange={handleDateChange}
+                        className="w-full"
+                    />
+                </div>
             </div>
-        </div>
         <div className="flex flex-col items-center justify-start w-full mt-3 max-w-[480px]">
           <div className="flex flex-row justify-start w-full py-1">
             <Text as="p" className="mb-1">
-            Compensation details
+            Restrictions or limitations
             </Text>
           </div>
           <Input
             type="text"
-            name="Compensation"
-            placeholder="Enter Compensation"
-            className="w-full"
-          />
-        </div>
-        <div className="flex flex-col items-center justify-start w-full mt-3 max-w-[480px]">
-          <div className="flex flex-row justify-start w-full py-1">
-            <Text as="p" className="mb-1">
-            Termination clauses
-            </Text>
-          </div>
-          <Input
-            type="text"
-            name="Termination"
-            placeholder="Enter Termination"
-            className="w-full"
-          />
-        </div>
-        <div className="flex flex-col items-center justify-start w-full mt-3 max-w-[480px]">
-          <div className="flex flex-row justify-start w-full py-1">
-            <Text as="p" className="mb-1">
-            Dispute resolution mechanisms
-            </Text>
-          </div>
-          <Input
-            type="text"
-            name="Dispute"
-            placeholder="Enter Dispute resolution"
+            name="Restrictions"
+            placeholder="Enter Restrictions"
             className="w-full"
           />
         </div>
         <div className="flex justify-center items-center w-full p-2 bg-gray-50 rounded-[12px]">
-        <Link to="/document-form-3">
+        <Link to="/document-form-4">
           <Button className="tracking-[0.24px] min-w-[155px] border-2 border-black">
             Next
           </Button>

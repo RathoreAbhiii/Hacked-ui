@@ -35,7 +35,7 @@ export default function DocumentForm1() {
         <div className="flex flex-row justify-center w-full p-3">
             <div className="flex flex-row justify-start w-full mt-3 pt-0.5 mx-1 max-w-[480px]">
             <Heading size="md" as="h1" className="tracking-[-0.80px]">
-           Contracts
+            Affidavits
             </Heading>
             </div>
         </div>
@@ -46,73 +46,34 @@ export default function DocumentForm1() {
         <div className="flex flex-col items-center justify-start w-full mt-3 max-w-[480px]">
           <div className="flex flex-row justify-start w-full py-1">
             <Text as="p" className="mb-1">
-            Subject matter of the contract
+            Content of the statement being sworn
             </Text>
           </div>
           <Input
             type="text"
-            name="subject"
-            placeholder="Enter subject"
+            name="Statement"
+            placeholder="Enter Statment"
             className="w-full"
           />
         </div>
         <div className="flex flex-row justify-center w-full mt-3 p-3">
             <div className="flex flex-row justify-center w-full mx-1 max-w-[480px]">
             <div className="flex flex-col items-center justify-start w-full">
-                <div className="flex flex-row justify-start w-full py-[3px]">
-                <Text as="p" className="mb-[5px]">
-                Terms and conditions
+                <div className="flex flex-row justify-start w-full py-0.5">
+                <Text as="p" className="mb-[7px]">
+                Facts supporting the statement
                 </Text>
                 </div>
                 <TextArea
-                name="enter_Terms"
-                placeholder="Enter Terms"
+                name="depth8framezero"
+                placeholder="Enter termination condition"
                 className="w-full text-blue_gray-500"
                 />
             </div>
             </div>
         </div>
-        <div className="flex flex-col items-center justify-start w-full mt-3 max-w-[480px]">
-          <div className="flex flex-row justify-start w-full py-1">
-            <Text as="p" className="mb-1">
-            Compensation details
-            </Text>
-          </div>
-          <Input
-            type="text"
-            name="Compensation"
-            placeholder="Enter Compensation"
-            className="w-full"
-          />
-        </div>
-        <div className="flex flex-col items-center justify-start w-full mt-3 max-w-[480px]">
-          <div className="flex flex-row justify-start w-full py-1">
-            <Text as="p" className="mb-1">
-            Termination clauses
-            </Text>
-          </div>
-          <Input
-            type="text"
-            name="Termination"
-            placeholder="Enter Termination"
-            className="w-full"
-          />
-        </div>
-        <div className="flex flex-col items-center justify-start w-full mt-3 max-w-[480px]">
-          <div className="flex flex-row justify-start w-full py-1">
-            <Text as="p" className="mb-1">
-            Dispute resolution mechanisms
-            </Text>
-          </div>
-          <Input
-            type="text"
-            name="Dispute"
-            placeholder="Enter Dispute resolution"
-            className="w-full"
-          />
-        </div>
         <div className="flex justify-center items-center w-full p-2 bg-gray-50 rounded-[12px]">
-        <Link to="/document-form-3">
+        <Link to="/document-form-5">
           <Button className="tracking-[0.24px] min-w-[155px] border-2 border-black">
             Next
           </Button>
